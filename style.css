@@ -1,0 +1,332 @@
+@import url("https://fonts.googleapis.com/css2?family=Amiri+Quran&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap");
+* {
+  scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Tajawal", sans-serif;
+}
+body {
+  background-color: white;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #007e06;
+  backdrop-filter: blur(4px);
+  padding: 2px;
+  margin: auto;
+  z-index: 9998;
+  border: #9aa6b287 solid 1px;
+  padding: 5px 20px;
+  position: sticky;
+  top: 0px;
+  margin-bottom: 10px;
+}
+header img {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  border: #bcccdc solid 1px;
+  transition: all 0.2s ease-in-out;
+}
+header img:hover {
+  transform: scale(1.1);
+}
+.linkdiv {
+  display: flex;
+  gap: 25px;
+}
+.linkdiv a {
+  text-align: center;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  font-size: 14px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+.linkdiv a::after{
+  content: "";
+  position: absolute;
+  top: 115%;
+  left: 0%;
+  right: 0%;
+  width: 0px;
+  height: 1px;
+  background-color: #9bad00;
+  transition: all 0.3s ease-in-out;
+}
+.linkdiv a::before{
+  content: "";
+  position: absolute;
+  top: 105%;
+  left: 0px;
+  width: 0;
+  height: 1px;
+  background-color: #00eaff;
+  transition: all 0.3s ease-in-out;
+}
+.linkdiv a:hover::before{
+  width: 100%;
+}
+.linkdiv a:hover::after{
+  width: 100%;
+}
+/* From Uiverse.io by JulanDeAlb */
+.hamburger input {
+  display: none;
+}
+.hamburger {
+  display: none;
+}
+.hamburger svg {
+  /* The size of the SVG defines the overall size */
+  width: 35px;
+  /* Define the transition for transforming the SVG */
+  transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+.line {
+  fill: none;
+  stroke: #ffffff;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+
+  /* Define the transition for transforming the Stroke */
+  transition:
+    stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s ease-in-out;
+}
+.hamburger svg:hover .line:not(:hover),
+.line:hover {
+  stroke: #b3b3b3;
+}
+.line-top-bottom {
+  stroke-dasharray: 12 63;
+}
+
+.hamburger input:checked + svg {
+  transform: rotate(-45deg);
+}
+
+.hamburger input:checked + svg .line-top-bottom {
+  stroke-dasharray: 20 300;
+  stroke-dashoffset: -32.42;
+}
+.sec {
+  margin: 10px auto;
+  border-radius: 5px;
+  display: flex;
+  width: 80%;
+  flex-direction: column;
+  margin-bottom: 20px;
+  background: white;
+  box-shadow: #2c2c2c 0px 1px 2px;
+  transition: all 0.2s ease-in-out;
+  border: #2c2c2c 0.2px solid;
+}
+.sec:hover {
+  box-shadow: none;
+  transform: translateY(1px);
+}
+.sec img{
+  width: 60%;
+  margin: auto;
+}
+.sec h1 {
+  font-size: 20px;
+  text-align: center;
+}
+.sec.one a {
+  text-decoration: none;
+  background: linear-gradient(45deg, #a7c1ff, #b3b3b3);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.sec.one a:hover {
+  background: linear-gradient(45deg, white, white);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.sec.one .alink {
+  background-color: #00393e;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px auto;
+}
+.sec.one .hdeeth,
+.sec.one .quran {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 15px 0px;
+}
+.sec.one .hdeeth p,
+.sec.one .quran p {
+  color: black;
+}
+.sec.one .quran p {
+  margin: 0px;
+  font-family: "Amiri Quran", serif;
+  font-weight: 300;
+}
+.sec p{
+  color: #00393e;
+  font-weight: 500;
+  margin: auto 20px 20px 20px;
+}
+.sec li{
+  border: #2c2c2c 1px solid;
+  list-style-type: none;
+  padding: 2px;
+  border-radius: 5px;
+  transition: all 0.2s ease-in-out;
+  margin: auto 20px 20px 20px;
+}
+.sec li:hover{
+  border: #2c2c2c 1px solid;
+  transform: scale(1.05);
+}
+.sections {
+  display: flex;
+  flex-direction: column;
+}
+.imp{
+  margin: 20px;
+}
+.imp:hover{
+  animation: imp 1.5s ease-in-out infinite;
+}
+@keyframes imp{
+  0%{
+    transform: translateY(0px);
+  }
+  50%{
+    transform: translateY(1px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
+}
+.cards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+.card{
+  width: 35%;
+  border-radius: 5px;
+  border: #2c2c2c 1px solid;
+  padding: 5px;
+  text-align: center;
+}
+.sec.eight a{
+  color: #191919;
+  text-decoration: none;
+  border: 1px solid #b3b3b3;
+  width: fit-content;
+  margin: 10px 20px;
+  padding:5px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+.sec.eight a:hover{
+  color: #00eaff;
+}
+.sec.eight a div{
+  width: 20px;
+}
+.fa-whatsapp{
+  color: green;
+}
+.fa-facebook{
+  color: blue;
+}
+footer {
+  background: #007e06;
+  color: #eee;
+  padding: 10px 20px;
+}
+
+footer a {
+  color: #ccc;
+  text-decoration: none;
+  transition: all 0.3s ease-in;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  border-top: 1px solid #333;
+  padding-top: 10px;
+}
+@media (max-width:700px) {
+  .hamburger{
+    display: inline;
+  }
+  .linkdiv {
+  position: absolute;
+  top: 70px;
+  left: 20px;
+  background: #007e06;
+  padding: 10px;
+  border-radius: 5px;
+  flex-direction: column;
+}
+
+}
+@media (max-width:435px) {
+  .sec{
+    width: 90%;
+  }
+  .card{
+    width: 100%;
+  }
+}
+.hide{
+  display: none;
+}
+.hide1{
+  animation: hides 0.5s forwards ease-in-out;
+}
+@keyframes hides{
+  0%{
+    transform: translateY(0);
+  }
+  100%{
+    transform: translateY(-350px);
+    display: none;
+  }
+}
+.show{
+  animation: shows 0.5s forwards ease-in-out;
+}
+@keyframes shows{
+  0%{
+    transform: translateY(-350px);
+    display: inline;
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
