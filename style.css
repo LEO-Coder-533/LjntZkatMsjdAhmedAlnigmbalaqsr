@@ -173,6 +173,7 @@ header img:hover {
 .sec .hdeeth p,
 .sec .quran p {
   color: black;
+  text-align: center;
 }
 .sec .quran p {
   margin: 0px;
