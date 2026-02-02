@@ -162,8 +162,8 @@ header img:hover {
   border-radius: 5px;
   margin: 10px auto;
 }
-.sec.one .hdeeth,
-.sec.one .quran {
+.sec .hdeeth,
+.sec .quran {
   display: flex;
   justify-content: center;
   flex-direction: column;
