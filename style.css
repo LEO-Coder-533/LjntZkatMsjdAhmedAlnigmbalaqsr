@@ -170,11 +170,11 @@ header img:hover {
   text-align: center;
   margin: 15px 0px;
 }
-.sec.one .hdeeth p,
-.sec.one .quran p {
+.sec .hdeeth p,
+.sec .quran p {
   color: black;
 }
-.sec.one .quran p {
+.sec .quran p {
   margin: 0px;
   font-family: "Amiri Quran", serif;
   font-weight: 300;
