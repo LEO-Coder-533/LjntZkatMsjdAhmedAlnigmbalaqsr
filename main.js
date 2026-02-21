@@ -13,8 +13,12 @@ checkbox.addEventListener("change", function () {
 
 links.forEach(link => {
   link.addEventListener("click", () => {
-    container.classList.add("hide1");
-    container.classList.remove("show");
-    checkbox.checked = false;
+
+    if (window.matchMedia("(max-width: 700px)").matches) {
+      container.classList.add("hide1");
+      container.classList.remove("show");
+      checkbox.checked = false;
+    }
+
   });
 });
